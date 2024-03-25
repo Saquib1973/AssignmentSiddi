@@ -4,21 +4,21 @@ const DashHome = () => {
     return (
         <div className='flex flex-col gap-6 p-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className='bg-white p-6 rounded-md flex flex-col items-start justify-around'>
+                <div className='bg-white p-6 rounded-md flex flex-col gap-4 items-start  justify-around'>
                     <div className='flex gap-4 justify-between px-4 w-full'>
-                        <p>Revenue</p>
+                        <p className='text-sm md:text-lg'>Revenue</p>
                         <div className='flex gap-4'>
                             <div className='flex gap-4 justify-center items-center'>
                                 <div className='bg-green-500 rounded-md h-4 w-4' />
-                                <p>Total Earn</p>
+                                <p className='text-sm md:text-lg'>Total Earn</p>
                             </div>
                             <div className='flex gap-4 justify-center items-center'>
                                 <div className='bg-orange-500 rounded-md h-4 w-4' />
-                                <p>Total Views</p>
+                                <p className='text-sm md:text-lg'>Total Views</p>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='w-full overflow-hidden'>
                         <svg width="430" height="158" viewBox="0 0 430 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.3638 10.6639C21.0541 10.659 20.7445 10.6001 20.4348 10.487C20.1252 10.374 19.8425 10.1835 19.587 9.91562C19.3314 9.64529 19.1262 9.28034 18.9713 8.82077C18.8165 8.35875 18.7391 7.77877 18.7391 7.08082C18.7391 6.41236 18.8018 5.82008 18.9271 5.304C19.0524 4.78545 19.2343 4.34923 19.4727 3.99534C19.7111 3.639 19.9986 3.36866 20.3353 3.18434C20.6744 3.00003 21.0566 2.90787 21.4817 2.90787C21.9044 2.90787 22.2804 2.99265 22.6098 3.16223C22.9415 3.32934 23.2119 3.56281 23.4208 3.86263C23.6296 4.16246 23.7648 4.50774 23.8263 4.8985H22.9268C22.8432 4.55935 22.681 4.27796 22.4402 4.05432C22.1993 3.83069 21.8799 3.71887 21.4817 3.71887C20.8968 3.71887 20.436 3.97322 20.0994 4.48194C19.7651 4.99066 19.5968 5.70458 19.5943 6.62371H19.6533C19.7909 6.41482 19.9544 6.23664 20.1436 6.08919C20.3353 5.93928 20.5466 5.82377 20.7776 5.74267C21.0087 5.66157 21.2532 5.62102 21.5112 5.62102C21.9438 5.62102 22.3394 5.72915 22.6982 5.94542C23.057 6.15923 23.3446 6.45537 23.5608 6.83383C23.7771 7.20984 23.8852 7.64114 23.8852 8.12774C23.8852 8.59468 23.7808 9.02229 23.5719 9.41059C23.363 9.79643 23.0693 10.1036 22.6909 10.3322C22.3148 10.5583 21.8725 10.6689 21.3638 10.6639ZM21.3638 9.85295C21.6734 9.85295 21.9511 9.77554 22.1969 9.62071C22.4451 9.46588 22.6405 9.25822 22.783 8.99772C22.928 8.73722 23.0005 8.44722 23.0005 8.12774C23.0005 7.81563 22.9305 7.53178 22.7904 7.27619C22.6528 7.01815 22.4623 6.81294 22.219 6.66057C21.9782 6.5082 21.7029 6.43202 21.3933 6.43202C21.1598 6.43202 20.9423 6.47871 20.7408 6.5721C20.5393 6.66303 20.3623 6.78837 20.2099 6.94811C20.06 7.10785 19.9421 7.29094 19.8561 7.49737C19.77 7.70135 19.727 7.91639 19.727 8.14248C19.727 8.44231 19.7971 8.72247 19.9372 8.98297C20.0797 9.24347 20.2738 9.4536 20.5196 9.61334C20.7678 9.77308 21.0492 9.85295 21.3638 9.85295ZM26.1606 8.49637L26.1459 7.41996H26.3228L28.8001 4.8985H29.8765L27.237 7.56741H27.1633L26.1606 8.49637ZM25.3496 10.5607V3.01109H26.2196V10.5607H25.3496ZM28.9475 10.5607L26.7357 7.7591L27.355 7.15454L30.0534 10.5607H28.9475Z" fill="black" />
                             <path d="M50.3633 5.37611L398.194 8.74533" stroke="#ECEDEF" />
@@ -53,47 +53,47 @@ const DashHome = () => {
                 <div className='grid grid-cols-2 gap-5'>
                     <div className='p-8 bg-white rounded-md flex flex-col text-black justify-around items-start'>
                         <div className='flex justify-between w-full'>
-                            <p className='text-lg'>Total Likes</p>
+                            <p className='text-sm md:text-lg'>Total Likes</p>
                             <i className="fi fi-rr-book-alt text-white text-3xl bg-black/30 flex items-center justify-center p-2 rounded-md"></i>
                         </div>
-                        <p className='text-2xl font-medium'>
+                        <p className='text-lg md:text-2xl font-medium'>
                             5,000
                         </p>
 
                     </div>
                     <div className='p-8 bg-red rounded-md flex flex-col text-white justify-around items-start'>
                         <div className='flex justify-between w-full'>
-                            <p className='text-lg'>Total Views</p>
+                            <p className='text-sm md:text-lg'>Total Views</p>
                             <i className="fi fi-rr-book-alt text-white text-3xl bg-white/30 flex items-center justify-center p-2 rounded-md"></i>
                         </div>
-                        <p className='text-2xl font-medium'>
+                        <p className='text-lg md:text-2xl font-medium'>
                             12,000
                         </p>
 
                     </div>
                     <div className='p-8 bg-red rounded-md flex flex-col text-white justify-around items-start'>
                         <div className='flex justify-between w-full'>
-                            <p className='text-lg'>Total Saves</p>
+                            <p className='text-sm md:text-lg'>Total Saves</p>
                             <i className="fi fi-rr-book-alt text-white text-3xl bg-white/30 flex items-center justify-center p-2 rounded-md"></i>
                         </div>
-                        <p className='text-2xl font-medium'>
+                        <p className='text-lg md:text-2xl font-medium'>
                             1,200
                         </p>
 
                     </div>
                     <div className='p-8 bg-white rounded-md flex flex-col text-black justify-around items-start'>
                         <div className='flex justify-between w-full'>
-                            <p className='text-lg'>Total Shares</p>
+                            <p className='text-sm md:text-lg'>Total Shares</p>
                             <i className="fi fi-rr-book-alt text-white text-3xl bg-black/30 flex items-center justify-center p-2 rounded-md"></i>
                         </div>
-                        <p className='text-2xl font-medium'>
+                        <p className='text-lg md:text-2xl font-medium'>
                             520
                         </p>
 
                     </div>
                 </div>
             </div>
-            <div className='bg-white w-full h-96 rounded-md'>
+            <div className='bg-white w-full h-[50vh] rounded-md'>
 
             </div>
         </div>
