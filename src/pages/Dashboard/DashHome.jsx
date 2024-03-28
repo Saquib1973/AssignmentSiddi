@@ -1,8 +1,94 @@
 import React from 'react'
+export const data = [
+    {
+        "name": "Example Video 1",
+        "status": "Active",
+        "category": "Ed",
+        "views": 10000,
+        "likes": 500
+    },
+    {
+        "name": "Example Video 2",
+        "status": "Inactive",
+        "category": "Politics",
+        "views": 5000,
+        "likes": 300
+    },
+    {
+        "name": "Example Video 3",
+        "status": "Active",
+        "category": "Sports",
+        "views": 20000,
+        "likes": 1000
+    },
+    {
+        "name": "Example Video 1",
+        "status": "Active",
+        "category": "Ed",
+        "views": 10000,
+        "likes": 500
+    },
+    {
+        "name": "Example Video 2",
+        "status": "Inactive",
+        "category": "Politics",
+        "views": 5000,
+        "likes": 300
+    },
+    {
+        "name": "Example Video 3",
+        "status": "Active",
+        "category": "Sports",
+        "views": 20000,
+        "likes": 1000
+    },
+    {
+        "name": "Example Video 1",
+        "status": "Active",
+        "category": "Ed",
+        "views": 10000,
+        "likes": 500
+    },
+    {
+        "name": "Example Video 2",
+        "status": "Inactive",
+        "category": "Politics",
+        "views": 5000,
+        "likes": 300
+    },
+    {
+        "name": "Example Video 3",
+        "status": "Active",
+        "category": "Sports",
+        "views": 20000,
+        "likes": 1000
+    },
+    {
+        "name": "Example Video 1",
+        "status": "Active",
+        "category": "Ed",
+        "views": 10000,
+        "likes": 500
+    },
+    {
+        "name": "Example Video 2",
+        "status": "Inactive",
+        "category": "Politics",
+        "views": 5000,
+        "likes": 300
+    },
+    {
+        "name": "Example Video 3",
+        "status": "Active",
+        "category": "Sports",
+        "views": 20000,
+        "likes": 1000
+    },
+]
 
 const DashHome = () => {
     return (
-        <div className='flex flex-col gap-6 p-8'>
+        <div className='flex flex-col gap-6 px-2 py-4 md:p-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className='bg-white p-6 rounded-md flex flex-col gap-4 items-start  justify-around'>
                     <div className='flex gap-4 justify-between px-4 w-full'>
@@ -93,11 +179,83 @@ const DashHome = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-white w-full h-[50vh] rounded-md'>
+            <div className='bg-white w-full rounded-md flex flex-col gap-4 py-6 max-h-[80vh]'>
+                <div className='w-full flex gap-4 justify-end px-6'>
+                    <button className='p-2 px-4 rounded-md bg-black text-white'>add</button>
+                    <button className='p-2 px-4 rounded-md bg-grey text-black'>delete</button>
+                </div>
+                <div className="relative  overflow-x-auto">
+                    <table className="w-full text-sm text-left">
+                        <thead className="text-xs sticky top-0 bg-white ">
+                            <tr>
+                                <th className="px-6 py-3">
+                                    Name
+                                </th>
+                                <th className="px-6 py-3">
+                                    Status
+                                </th>
+                                <th className="px-6 py-3">
+                                    Category
+                                </th>
+                                <th className="px-6 py-3">
+                                    Views
+                                </th>
+                                <th className="px-6 py-3">
+                                    Likes
+                                </th>
+                            </tr>
+                        </thead>
+                        {
+                            data.map((dat, i) => (
 
+                                <ContentTable name={dat.name} category={dat.category} views={dat.views} likes={dat.likes} status={dat.status} key={i} />
+                            ))
+                        }
+
+                    </table>
+                </div>
             </div>
         </div>
     )
 }
 
 export default DashHome
+
+
+export const ContentTable = ({ name, status, category, views, likes }) => {
+    return (
+        <>
+            <tbody>
+                <tr className="">
+                    <th className="px-6 py-4 font-medium whitespace-nowrap">
+                        {name}
+                    </th>
+                    <td className="px-6 py-4">
+                        <select name="status" className='outline outline-1 rounded-md md:p-1' defaultValue={status} id="">
+                            <option value="Active">
+                                active
+                            </option>
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+                        </select>
+                    </td>
+                    <td className="px-6 py-4">
+                        <select name="category" className='outline outline-1 rounded-md md:p-1' defaultValue={category} id="">
+                            <option value="Politics">politics</option>
+                            <option value="Ed">education</option>
+                            <option value="Sports" >sports</option>
+                        </select>
+                    </td>
+                    <td className="px-6 py-4">
+                        {views}
+                    </td>
+                    <td className="px-6 py-4">
+                        {likes}
+                    </td>
+                </tr>
+            </tbody>
+        </>
+
+    )
+}
